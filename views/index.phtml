@@ -1,0 +1,64 @@
+<?php
+// Variável de configuração de Path para Template.
+include_once ("templateAdm/header.phtml")
+?>
+
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="/">Início</a>
+        </li>
+        <li class="breadcrumb-item active"><?php echo $dados[title]; ?></li>
+        </ol>   
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-10">
+                    <h1><?php echo $dados[title]; ?></h1>
+                </div>
+                <div class="col-md-2 text-right">
+                    <!-- <a href="/students/create" class="btn btn-primary">Novo</a> -->
+                </div>
+            </div>
+ <!-- Area Chart Example-->
+ <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-area-chart"></i> Acessos</div>
+        <div class="card-body">
+          <canvas id="myAreaChart" width="100%" height="30"></canvas>
+        </div>
+        <div class="card-footer small text-muted">Última Atualização 11:59 PM</div>
+      </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <!-- Example Bar Chart Card-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-bar-chart"></i> Acessos Mensais</div>
+            <div class="card-body">
+              <canvas id="myBarChart" width="100" height="50"></canvas>
+            </div>
+            <div class="card-footer small text-muted">Última Atualização 11:59 PM</div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <!-- Example Pie Chart Card-->
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fa fa-pie-chart"></i> Principais Acessos</div>
+            <div class="card-body">
+              <canvas id="myPieChart" width="100%" height="100"></canvas>
+            </div>
+            <div class="card-footer small text-muted">Última Atualização 11:59 PM</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid-->
+<?php
+// Variável de configuração de Path para Template.
+include_once ("templateAdm/footer.phtml")
+?>

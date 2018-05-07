@@ -1,0 +1,65 @@
+<?php
+// Variável de configuração de Path para Template.
+include_once ("templateAdm/header.phtml")
+?>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="/">Início</a>
+        </li>
+        <li class="breadcrumb-item active"><?php echo $dados[title]; ?></li>
+        </ol>   
+    
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-10">
+                    <h1>Alunos</h1>
+                </div>
+                <div class="col-md-2 text-right">
+                    <a href="/students/create" class="btn btn-primary">Novo</a>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>RG</th>
+                        <th>Telefone</th>
+                        <th>Data de nascimento</th>
+                        <th>Ação</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach($students as $student){ ?>
+                    <tr>
+                        <td><?php echo $student->name ?></td>
+                        <td><?php echo $student->cpf ?></td>
+                        <td><?php echo $student->rg ?></td>
+                        <td><?php echo $student->phone ?></td>
+                        <td><?php echo $student->birthday ?></td>
+                        <td><a href="/students/edit/<?php echo $student->id ?>" class="btn btn-primary btn-xs">
+                                <i class="fa fa-pencil"></i>
+                            </a>
+                            <a href="/students/delete/<?php echo $student->id ?>" class="btn btn-danger btn-xs">
+                                <i class="fa fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <?php } ?>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+    
+<?php
+// Variável de configuração de Path para Template.
+include_once ("templateAdm/footer.phtml")
+?>

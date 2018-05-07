@@ -1,0 +1,58 @@
+<?php
+// Variável de configuração de Path para Template.
+include_once ("templateAdm/header.phtml")
+?>
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="/">Início</a>
+        </li>
+        <li class="breadcrumb-item active"><?php echo $dados[title]; ?></li>
+        </ol>  
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- <a href="/" class="btn btn-primary">Lista</a> -->
+            <div class="row">
+                <div class="col-md-10">
+                    <h1><?php echo $dados[title]; ?></h1>
+                </div>
+                <div class="col-md-2 text-right">
+                    <!-- <a href="/students/create" class="btn btn-primary">Novo</a> -->
+                </div>
+            </div>
+            <form method="post">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" class="form-control" placeholder="Nome">
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" name="cpf" class="form-control" placeholder="CPF">
+                </div>
+                <div class="form-group">
+                    <label for="rg">RG</label>
+                    <input type="text" name="rg" class="form-control" placeholder="RG">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefone</label>
+                    <input type="text" name="phone" class="form-control" placeholder="Telefone">
+                </div>
+                <div class="form-group">
+                    <label for="birthday">Data de nascimento</label>
+                    <input type="date" name="birthday" class="form-control" placeholder="Data de nascimento">
+                </div>
+                <div class="form-group  text-center">
+                
+                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+<?php
+// Variável de configuração de Path para Template.
+include_once ("templateAdm/footer.phtml")
+?>
