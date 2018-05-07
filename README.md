@@ -6,7 +6,7 @@ O código desse projeto consiste num CRUD básico de alunos, sem nenhum teste ou
 - Illuminate Database (ORM)
 - Phpdotenv (Configuração)
 
-#Instalção
+# Instalação
 - ~/composer update
 - cd public/
 - php -S localhost:8080
